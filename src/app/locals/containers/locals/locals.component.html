@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h2 class="mb-3">Els nostres locals</h2>
+      <div class="mb-3">
+        <button class="btn" (click)="onClickChangeGrid('cards')">Targetes</button>
+        <button class="btn" (click)="onClickChangeGrid('list')">Llista</button>
+      </div>
+      <ng-container [ngSwitch]="gridMode">
+        <ng-container *ngSwitchCase="'list'">
+          <div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item d-flex align-items-center" *ngFor="let local of locals"><img src="/assets/images/no-image-placeholder.jpg" alt="..." height="100" width="150"> <span class="ml-4">{{ local.name }}</span> <a class="btn btn-primary ml-auto" routerLink="/locals/1">Ves-hi!</a> </li>
+            </ul>
+          </div>
+        </ng-container>
+        <ng-container *ngSwitchCase="'cards'">
+          <div class="card-deck">
+            <app-local-card *ngFor="let local of locals" [local]="local"></app-local-card>
+          </div>
+        </ng-container>
+      </ng-container>
+
+    </div>
+  </div>
+</div>
+

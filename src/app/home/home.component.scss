@@ -1,0 +1,12 @@
+@import "src/assets/styles/core/colors";
+
+.home {
+  &__join-us {
+    background: $secondary;
+    color: $textColor;
+
+    .container {
+      height: 350px;
+    }
+  }
+}

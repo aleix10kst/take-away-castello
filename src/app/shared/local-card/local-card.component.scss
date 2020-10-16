@@ -1,0 +1,15 @@
+:host {
+  margin-bottom: 2rem;
+}
+
+.card {
+  width: 250px;
+
+  .placeholder {
+    background: grey;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+}

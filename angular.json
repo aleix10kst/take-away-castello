@@ -28,9 +28,14 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "/node_modules/@fortawesome/fontawesome-free/css/fontawesome.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/assets/styles/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -123,6 +128,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "castello-ajuda"
+    }
+  },
+  "defaultProject": "castello-ajuda",
+  "cli": {
+    "analytics": "3920bf36-7437-440f-883f-391bbf051b1d"
+  }
 }
