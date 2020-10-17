@@ -29,14 +29,14 @@ async function loadAnswers() {
         });
 
         const rows = res.data.values;
+        // Remove the headers
+        rows.shift()
 
-        if (rows.length) {
+        const snap = await db.collection('establishments').get();
 
-            // Remove the headers
-            rows.shift()
-
+        if (rows.length > snap.size) {
             // For each row
-            for (const row of rows) {
+            for (const row of rows.slice(snap.size, rows.length)) {
                 const establiment = {
                     timeStamp: row[0],
                     answer: row[1],
@@ -53,9 +53,8 @@ async function loadAnswers() {
 
                 await db.collection("establishments").add(establiment)
             }
-
         } else {
-            console.log("No data found.");
+            console.log("No new establiments found.");
         }
 
     } catch (error) {
@@ -66,8 +65,8 @@ async function loadAnswers() {
 
 var job = new CronJob(
 	'*/30 * * * *',
-	() => {
-		console.log('You will see this message every second');
+	async () => {
+        loadAnswers();
 	},
 	null,
 	true
