@@ -1,13 +1,13 @@
 const fs = require("fs");
 const { google } = require("googleapis");
 const admin = require('firebase-admin');
-const serviceAccount = require("./take-away-castello-b270ec0428a2.json");
+const serviceAccount = require("./take-away-castello-130c6-firebase-adminsdk-erch2-36d0090f5d.json");
 const service = google.sheets("v4");
 const credentials = require("./take-away-castello-b270ec0428a2.json");
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
-  //databaseURL: "https://take-away-castello-130c6.firebaseio.com"
+  databaseURL: "https://take-away-castello-130c6.firebaseio.com"
 });
 const db = admin.firestore();
 
@@ -37,24 +37,25 @@ const authClient = new google.auth.JWT(
 
             // For each row
             for (const row of rows) {
-                const establiment = { 
-                    timeStamp: row[0], 
+                const establiment = {
+                    timeStamp: row[0],
                     answer: row[1],
                     miniatura: row[2],
                     horari: row[3],
-                    adress: row[4],
+                    address: row[4],
                     menu: row[5],
                     description: row[6],
                     location: row[7],
                     tlf: row[8],
+                    creation_date: new Date()
                 };
                 console.log(establiment);
 
-                await db.collection("establiments-test").add(establiment)
+                await db.collection("establishments").add(establiment)
             }
 
         } else {
-            console.log("No data found.");  
+            console.log("No data found.");
         }
 
     } catch (error) {
