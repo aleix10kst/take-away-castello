@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-local',
+  selector: 'tac-local',
   templateUrl: './local.component.html',
   styleUrls: ['./local.component.scss']
 })

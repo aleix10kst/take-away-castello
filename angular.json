@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "castello-ajuda": {
+    "take-away-castello": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -12,12 +12,12 @@
       },
       "root": "",
       "sourceRoot": "src",
-      "prefix": "app",
+      "prefix": "tac",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/castello-ajuda",
+            "outputPath": "dist/take-away-castello",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -28,7 +28,7 @@
               "src/assets"
             ],
             "styles": [
-              "/node_modules/@fortawesome/fontawesome-free/css/fontawesome.css",
+              "node_modules/@fortawesome/fontawesome-free/css/all.css",
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/assets/styles/styles.scss"
             ],
@@ -71,18 +71,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "castello-ajuda:build"
+            "browserTarget": "take-away-castello:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "castello-ajuda:build:production"
+              "browserTarget": "take-away-castello:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "castello-ajuda:build"
+            "browserTarget": "take-away-castello:build"
           }
         },
         "test": {
@@ -119,18 +119,18 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "castello-ajuda:serve"
+            "devServerTarget": "take-away-castello:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "castello-ajuda:serve:production"
+              "devServerTarget": "take-away-castello:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "castello-ajuda",
+  "defaultProject": "take-away-castello",
   "cli": {
     "analytics": "3920bf36-7437-440f-883f-391bbf051b1d"
   }

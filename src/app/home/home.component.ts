@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Local} from '@core/models/local.model';
 
 @Component({
-  selector: 'app-home',
+  selector: 'tac-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })

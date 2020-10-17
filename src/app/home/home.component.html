@@ -4,7 +4,7 @@
       <div class="col">
         <h2 class="mx-auto mb-3">Últims locals afegits</h2>
         <div class="card-deck">
-          <app-local-card *ngFor="let local of locals | slice:0:4" [local]="local"></app-local-card>
+          <tac-local-card *ngFor="let local of locals | slice:0:4" [local]="local"></tac-local-card>
         </div>
         <div class="d-flex w-100">
           <button class="btn btn-outline-info mx-auto">Veure'ls tots</button>

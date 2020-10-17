@@ -139,13 +139,13 @@
     "directive-selector": [
       true,
       "attribute",
-      "app",
+      "tac",
       "camelCase"
     ],
     "component-selector": [
       true,
       "element",
-      "app",
+      "tac",
       "kebab-case"
     ]
   }

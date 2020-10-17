@@ -2,7 +2,7 @@ import {Component, Input, OnInit} from '@angular/core';
 import {Local} from '@core/models/local.model';
 
 @Component({
-  selector: 'app-local-card',
+  selector: 'tac-local-card',
   templateUrl: './local-card.component.html',
   styleUrls: ['./local-card.component.scss']
 })

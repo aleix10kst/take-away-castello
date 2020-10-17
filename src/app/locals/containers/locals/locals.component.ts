@@ -2,7 +2,7 @@ import {AfterViewInit, Component, OnInit} from '@angular/core';
 import {Local} from '../../../core/models/local.model';
 
 @Component({
-  selector: 'app-locals',
+  selector: 'tac-locals',
   templateUrl: './locals.component.html',
   styleUrls: ['./locals.component.scss']
 })
