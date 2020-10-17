@@ -45,3 +45,8 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+#scripts
+/scripts/node_modules
+/scripts/package-lock.json
+/scripts/take-*.json
