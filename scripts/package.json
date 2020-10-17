@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "cron": "^1.8.2",
     "firebase-admin": "^9.2.0",
     "googleapis": "^39.2.0"
   }

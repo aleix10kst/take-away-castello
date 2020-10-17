@@ -1,4 +1,4 @@
-const fs = require("fs");
+const CronJob = require('cron').CronJob;
 const { google } = require("googleapis");
 const admin = require('firebase-admin');
 const serviceAccount = require("./take-away-castello-130c6-firebase-adminsdk-erch2-36d0090f5d.json");
@@ -18,7 +18,7 @@ const authClient = new google.auth.JWT(
     ["https://www.googleapis.com/auth/spreadsheets"]
 );
 
-(async function () {
+async function loadAnswers() {
     try {
         const token = await authClient.authorize();
         authClient.setCredentials(token);
@@ -62,4 +62,14 @@ const authClient = new google.auth.JWT(
         console.log(error);
     }
 
-})();
+}
+
+var job = new CronJob(
+	'*/30 * * * *',
+	() => {
+		console.log('You will see this message every second');
+	},
+	null,
+	true
+);
+job.start();
