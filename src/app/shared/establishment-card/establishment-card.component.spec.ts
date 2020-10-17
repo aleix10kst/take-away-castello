@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LocalCardComponent } from './local-card.component';
+import { EstablishmentCardComponent } from './establishment-card.component';
 
 describe('HomeLocalCardComponent', () => {
-  let component: LocalCardComponent;
-  let fixture: ComponentFixture<LocalCardComponent>;
+  let component: EstablishmentCardComponent;
+  let fixture: ComponentFixture<EstablishmentCardComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ LocalCardComponent ]
+      declarations: [ EstablishmentCardComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(LocalCardComponent);
+    fixture = TestBed.createComponent(EstablishmentCardComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

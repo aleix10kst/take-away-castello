@@ -1,4 +1,4 @@
-export interface Local {
+export interface Establishment {
   id?: number;
   name: string;
   description?: string;

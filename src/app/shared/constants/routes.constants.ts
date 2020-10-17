@@ -1,3 +1,3 @@
 export const HOME_PATH = 'home';
-export const LOCALS_PATH = 'locals';
+export const ESTABLISHMENTS_PATH = 'establiments';
 export const CONTACTE_PATH = 'contacte';

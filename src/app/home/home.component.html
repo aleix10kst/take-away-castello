@@ -2,9 +2,10 @@
   <div class="container my-4">
     <div class="row">
       <div class="col">
-        <h2 class="mx-auto mb-3">Últims locals afegits</h2>
+        <h2 class="mx-auto mb-3">Últims establiments afegits</h2>
         <div class="card-deck">
-          <tac-local-card *ngFor="let local of locals | slice:0:4" [local]="local"></tac-local-card>
+          <tac-establishment-card *ngFor="let establishment of establishments | slice:0:4"
+                                  [establishment]="establishment"></tac-establishment-card>
         </div>
         <div class="d-flex w-100">
           <button class="btn btn-outline-info mx-auto">Veure'ls tots</button>
@@ -17,6 +18,6 @@
   <div class="container d-flex flex-column text-center justify-content-center align-items-center">
     <h2>Ets propietari d'un local que ven menjar per emportar i no ets al sistema? </h2>
     <h3>Si vols que t'afegim, emplena el formulari que trobaràs a la nostra secció de contacte</h3>
-    <button class="btn btn-outline-info mt-4">Contacta'ns</button>
+    <a class="btn btn-outline-info mt-4" routerLink="/contacte">Contacta'ns</a>
   </div>
 </section>

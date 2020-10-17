@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {LocalCardComponent} from './local-card/local-card.component';
+import {EstablishmentCardComponent} from './establishment-card/establishment-card.component';
 import {RouterModule} from '@angular/router';
 
 
 
 @NgModule({
-  declarations: [LocalCardComponent],
+  declarations: [EstablishmentCardComponent],
   imports: [
     CommonModule,
     RouterModule
   ],
-  exports: [LocalCardComponent]
+  exports: [EstablishmentCardComponent]
 })
 export class SharedModule { }
