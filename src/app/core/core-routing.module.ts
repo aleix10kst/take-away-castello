@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {HomeComponent} from '../home/home.component';
 import {CONTACTE_PATH, HOME_PATH, ESTABLISHMENTS_PATH} from '../shared/constants/routes.constants';
-import {ContactComponent} from '../containers/contact/contact.component';
+import {ContactComponent} from '../contact/containers/contact/contact.component';
 
 const routes: Routes = [
   {

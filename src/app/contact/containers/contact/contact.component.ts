@@ -12,4 +12,8 @@ export class ContactComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onClickForm(): void {
+    window.open('https://forms.gle/nZPFSxKc8cZW2RPi8', 'new');
+  }
+
 }

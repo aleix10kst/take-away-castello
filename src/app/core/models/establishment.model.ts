@@ -1,6 +1,14 @@
 export interface Establishment {
-  id?: number;
   name: string;
+  friendlyName?: string;
   description?: string;
-  cardImg?: string;
+  miniatura?: string;
+  contactInfo?: string;
+  timetable?: string;
+  address?: string;
+  coordinates?: string;
+  menuImg?: string;
+  menu?: string;
+  delivering?: string;
+  creation_date?: Date;
 }

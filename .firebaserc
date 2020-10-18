@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "take-away-castello-130c6": {
+      "hosting": {
+        "take-away-castello": [
+          "take-away-castello-130c6"
+        ]
+      }
+    }
+  }
+}

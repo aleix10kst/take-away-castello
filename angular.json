@@ -126,6 +126,10 @@
               "devServerTarget": "take-away-castello:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
     }

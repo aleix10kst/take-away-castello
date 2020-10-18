@@ -1,9 +1,9 @@
 <div class="card">
-  <img src="" class="card-img-top" alt="..." *ngIf="establishment.cardImg">
-  <img src="assets/images/no-image-placeholder.jpg" alt="..." class="card-img-top" *ngIf="!establishment.cardImg"/>
+  <img src="" class="card-img-top" alt="..." *ngIf="establishment.miniatura">
+  <img src="assets/images/no-image-placeholder.jpg" alt="..." class="card-img-top" *ngIf="!establishment.miniatura"/>
   <div class="card-body">
     <h5 class="card-title">{{ establishment.name }}</h5>
     <p class="card-text">{{ establishment.description }}</p>
-    <a routerLink="/establiments/1" class="btn btn-primary">Ves-hi!</a>
+    <a routerLink="/establiments/{{ establishment.friendlyName }}" class="btn btn-primary">Ves-hi!</a>
   </div>
 </div>

@@ -4,8 +4,11 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import {CoreModule} from '@core/core.module';
 import {HomeModule} from './home/home.module';
-import {HttpClientModule} from '@angular/common/http';
-import { ContactComponent } from './containers/contact/contact.component';
+import { ContactComponent } from './contact/containers/contact/contact.component';
+import {AngularFireModule} from '@angular/fire';
+import {firebaseConfig} from '../assets/credentials';
+import {AngularFirestoreModule} from '@angular/fire/firestore';
+
 
 @NgModule({
   declarations: [
@@ -14,7 +17,8 @@ import { ContactComponent } from './containers/contact/contact.component';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule,
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFirestoreModule,
     HomeModule,
     CoreModule
   ],

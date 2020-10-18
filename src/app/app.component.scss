@@ -1,7 +1,6 @@
 @import "src/assets/styles/core/colors";
 
 .jumbotron {
-  height: 25vh;
   background: $primary;
 
   &--title {
@@ -16,4 +15,8 @@
     text-align: center;
     width: 60%;
   }
+}
+
+main {
+  padding-bottom: 75px;
 }

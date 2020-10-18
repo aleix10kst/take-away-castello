@@ -1,8 +1,5 @@
 @import "src/assets/styles/core/colors";
 
 .footer {
-  bottom: 0;
-  width: 100%;
-  height: 135px;
-  background: $thirdary;
+  flex-shrink: 0;
 }
